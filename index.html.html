@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Rating Component</title>
+    <link rel="stylesheet" href="request.css">
+</head>
+<body>
+    <main>
+        <!-- Container -->
+        <div class="container">
+            <!-- Star image -->
+            <div class="star">
+                <img src="/images/icon-star.svg" alt="" aria-hidden="true">
+            </div>
+            <!-- Main text content -->
+            <div class="content">
+                <h1>How did we do?</h1>
+                <p>
+                    Please let us know how we did with your support
+                    request. All feedback is appreciated to help us 
+                    improve our offering!
+                </p>
+            </div>
+            <!-- (1-5) rating  -->
+            <form action="/thank-you-files/thank-you.html" class="rating">
+                <div class="rating-container">
+                    <div id="rating-one-container" class="rating-number-container">
+                        <input type="radio" id="one-input" class="rating-number-input" name="current-rating" value="1" >
+                        <label for="one-input" id="one-label" class="rating-number-label">1</label>
+                    </div>
+                    <div id="rating-two-container" class="rating-number-container">
+                        <input type="radio" id="two-input" class="rating-number-input" name="current-rating" value="2" >
+                        <label for="two-input" id="two-label" class="rating-number-label">2</label>
+                    </div>
+                    <div id="rating-three-container" class="rating-number-container">
+                        <input type="radio" id="three-input" class="rating-number-input" name="current-rating" value="3" >
+                        <label for="three-input" id="three-label" class="rating-number-label">3</label>
+                    </div>
+                    <div id="rating-four-container" class="rating-number-container">
+                        <input type="radio" id="four-input" class="rating-number-input" name="current-rating" value="4" ">
+                        <label for="four-input" id="four-label" class="rating-number-label">4</label>
+                    </div>
+                    <div id="rating-five-container" class="rating-number-container">
+                        <input type="radio" id="five-input" class="rating-number-input" name="current-rating" value="5" >
+                        <label for="five-input" id="five-label" class="rating-number-label">5</label>
+                    </div>
+                </div>
+                <div class="submit-container">
+                    <button type="submit" onclick="submitted()">Submit</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <script src="request.js"></script>
+</body>
+</html>
