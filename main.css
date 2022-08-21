@@ -1,0 +1,167 @@
+/* ! Global */
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+:root {
+    /* Primary colour */
+    --orange: hsl(25, 97%, 53%);
+    /* Neutral colours */
+    --white: hsl(0, 0%, 100%);
+    --light-grey: hsl(217, 12%, 63%);
+    --medium-grey: hsl(216, 12%, 54%);
+    --dark-blue: hsl(213, 19%, 18%);
+    --very-dark-blue: hsl(216, 12%, 8%);
+}
+* {
+    margin:0;
+    padding:0;
+    border:0;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--very-dark-blue);
+    font-family: 'Overpass', sans-serif;
+}
+/* ? Main */
+main {
+    width: 350px;
+    height: auto;
+    background-color: var(--dark-blue);
+    border-radius: 25px;
+    overflow: hidden;
+    padding: 2rem;
+}
+/* ? Container */
+.container {
+    width: 100%;
+    height: 100%;;
+}
+/* ? Star image */
+.star {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    background-color: hsla(216, 12%, 54%, 0.2);
+}
+.star > img {
+    padding: 12px;
+}
+/* ? Main text content */
+.content {
+    margin-top: 1.5rem;
+}
+.content > h1 {
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--white);
+}
+.content > p {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--medium-grey);
+    margin-top: 0.5rem;
+    line-height: 1.5rem;
+}
+/* ? (1-5) rating */
+.rating {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+.rating-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.rating-number-container {
+    position: relative;
+}
+.rating-number-input {
+    width: 45px;
+    height: 45px;
+    background-color: hsla(216, 12%, 54%, 0.2);
+    border-radius: 25px;
+    appearance: none;
+}
+.rating-number-label {
+    position: absolute;
+    color: var(--white);
+    top: 13px;
+    user-select: none;
+}
+#one-label {
+    right: 19px;
+}
+#two-label {
+    right: 17px;
+}
+#three-label {
+    right: 17px;
+}
+#four-label {
+    right: 18px;
+}
+#five-label {
+    right: 17px;
+}
+/* ? Submit button */
+.submit-container {
+    width: 100%;
+}
+button {
+    width: 100%;
+    height: 40px;
+    text-transform: uppercase;
+    color: var(--white);
+    background-color: var(--orange);
+    border-radius: 30px;
+    font-family: 'Overpass', sans-serif;
+    font-size: 15px;
+    margin-top: 1rem;
+    padding: 3px 0 0 0;
+    letter-spacing: 2px;
+    transition: all 0.3s;
+}
+/* ! Active states  */
+.rating-number-input:checked {
+    transition: ease-in-out all 0.3s;
+    background-color: var(--orange);
+}
+.rating-number-input:hover {
+    transition: ease-in-out all 0.3s;
+    background-color: var(--light-grey);
+    cursor: pointer;
+}
+button:hover {
+    transition: all ease-out 0.3s;
+    cursor: pointer;
+    background-color: var(--white);
+    color: var(--orange);
+} 
+/* ! Media Queries */
+@media screen and (max-width: 375px) {
+    /* ? Main */
+    main {
+        width: 275px;
+    }
+}
+@media screen and (max-width: 320px) {
+    /* ? Main */
+    main {
+        width: 230px;
+    }
+    /* ? Main text content */
+    .content {
+        margin-top: 1rem;
+    }
+    /* ? (1-5) rating */
+    .rating-number {
+        width: 40px;
+        height: 40px;
+    }
+}
